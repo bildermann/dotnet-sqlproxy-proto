@@ -1,0 +1,18 @@
+POST http://localhost:5000/api/request
+Content-Type: application/json
+
+{
+    "select": ["emp_no", "first_name", "last_name"],
+    "from": "employees",
+    "where": [
+        {
+            "fieldname": "gender", 
+            "operator": "=", 
+            "values": [
+                {"value": "F", "datatype": "string"}
+            ]
+        }
+    ],
+    "limit": 1,
+    "offset": 1
+}
